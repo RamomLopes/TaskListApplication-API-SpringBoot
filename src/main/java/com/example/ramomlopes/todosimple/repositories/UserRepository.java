@@ -1,4 +1,4 @@
-package com.example.ramomlopes.todosimple;
+package com.example.ramomlopes.todosimple.repositories;
 
 import com.example.ramomlopes.todosimple.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
