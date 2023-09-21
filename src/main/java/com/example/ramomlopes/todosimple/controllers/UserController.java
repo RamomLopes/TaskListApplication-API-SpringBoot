@@ -18,8 +18,8 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id){
-        User user = this.userService.findById(id);
-        return ResponseEntity.ok(user);
+        User obj = this.userService.findById(id);
+        return ResponseEntity.ok().body(obj);
     }
     @PostMapping
     public ResponseEntity<Void> create(@Valid @RequestBody User obj){

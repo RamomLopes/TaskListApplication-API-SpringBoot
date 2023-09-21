@@ -4,6 +4,7 @@ import com.example.ramomlopes.todosimple.models.Task;
 import com.example.ramomlopes.todosimple.models.User;
 import com.example.ramomlopes.todosimple.repositories.TaskRepository;
 import jakarta.transaction.Transactional;
+import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,7 +41,8 @@ public class TaskService {
     public Task update(Task obj){
         Task newObj = findById(obj.getId());
         newObj.setDescription(obj.getDescription());
-        return this.taskRepository.save(newObj);
+        newObj = this.taskRepository.save(newObj);
+        return newObj;
     }
 
     public void delete(Long id){
