@@ -7,6 +7,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaskService {
 
@@ -18,6 +20,11 @@ public class TaskService {
     public Task findById(Long id){
         Task task = this.taskRepository.findById(id).get();
         return task;
+    }
+
+    public List<Task> findAllByUserId(Long userId){
+        List<Task> tasks = this.taskRepository.findByUser_id(userId);
+        return tasks;
     }
 
     @Transactional
