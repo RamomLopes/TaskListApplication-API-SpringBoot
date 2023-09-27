@@ -4,7 +4,6 @@ import com.example.ramomlopes.todosimple.models.Task;
 import com.example.ramomlopes.todosimple.models.User;
 import com.example.ramomlopes.todosimple.repositories.TaskRepository;
 import jakarta.transaction.Transactional;
-import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
