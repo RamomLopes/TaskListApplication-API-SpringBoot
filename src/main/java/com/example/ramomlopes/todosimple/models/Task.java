@@ -3,15 +3,11 @@ package com.example.ramomlopes.todosimple.models;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_task")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Task {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
